@@ -1,3 +1,24 @@
+:root {
+    /* Color */
+    --clr-violett-100: hsl(270, 3%, 87%);
+    --clr-violett-200: hsl(279, 6%, 55%);
+    --clr-violett-500: hsl(278, 94%, 30%);
+    --clr-violett-900: hsl(278, 68%, 11%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-red-500: hsl(0, 100%, 66%);
+    --clr-blue-500: hsl(249, 99%, 64%);
+    /* Font */
+    --fs-100: 0.75rem;
+    --fs-200: 0.8125rem;
+    --fs-300: 0.875rem;
+    --fs-400: 0.9375rem;
+    --fs-500: 1rem;
+    --fs-600: 1.125rem;
+    --fs-700: 1.25rem;
+    --fs-800: 1.5rem;
+    --fs-900: 2rem;
+}
+
 * {
     margin: 0;
     padding: 0;
