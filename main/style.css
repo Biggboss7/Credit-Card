@@ -34,3 +34,11 @@ body {
     min-width: 375px;
     max-height: 100vh;
 }
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    border: 0;
+    overflow: hidden;
+}
