@@ -70,3 +70,46 @@ body {
     border: 0;
     overflow: hidden;
 }
+
+.app {
+    min-height: 100vh;
+}
+
+.card__displayer {
+    width: 31%;
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../images/bg-main-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 100%;
+    height: 15.3rem;
+    position: absolute;
+    font-size: var(--fs-300);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    border-radius: 0.625rem;
+}
+
+.card_front {
+    padding: 2rem;
+    left: 30%;
+    top: 20%;;
+    background-image: url("../images/bg-card-front.png");
+    background-size: cover;
+}
+
+.card__number {
+  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 0.9049295774647887rem + 0.9389671361502347vw, 1.75rem);
+  font-weight: normal;
+}
+
+.card_front p {
+  display: flex;
+  justify-content: space-between;
+}
