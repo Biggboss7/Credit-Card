@@ -17,7 +17,35 @@
     --fs-700: 1.25rem;
     --fs-800: 1.5rem;
     --fs-900: 2rem;
+    /* Margin */
+    --mb-100: 1rem;
+    --mb-200: 1.5rem;
+    --mb-300: 2rem;
+    --mb-400: 2.5rem;
+    --mb-500: 3rem;
 }
+
+  /* Utility Class */
+
+  .mb-100 {
+    margin-bottom: var(--mb-100);
+  }
+
+  .mb-200 {
+    margin-bottom: var(--mb-200);
+  }
+
+  .mb-300 {
+    margin-bottom: var(--mb-300);
+  }
+
+  .mb-400 {
+    margin-bottom: var(--mb-400);
+  }
+
+  .mb-500 {
+    margin-bottom: var(--mb-500);
+  }
 
 * {
     margin: 0;
