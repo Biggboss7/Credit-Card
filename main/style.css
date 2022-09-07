@@ -113,3 +113,8 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.card_back {
+  left: 55%;
+  top: 51%;
+}
