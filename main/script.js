@@ -8,4 +8,14 @@ const userInputs = document.querySelectorAll("input");
 const inputCardNumber = document.getElementById("in-cardNumber");
 const cardDigits = [];
 
+const spaceFormat = function (event) {
+    if (event.data === null) {
+        cardDigits.pop();
+    } else {
+        let digit = event.data;
+        if ((cardDigits.length + 1)%4 === 0 && (cardDigits.length + 1) < 16) digit += " ";
+        cardDigits.push(digit);
+    };
+    inputCardNumber.value = cardDigits.reduce((acc, currentValue) => acc + currentValue, "");
+};
 
