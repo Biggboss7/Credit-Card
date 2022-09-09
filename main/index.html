@@ -44,7 +44,7 @@
                 <span class="card__cvc" id="cardCVC">000</span>
             </div>
         </section>
-        <form class="form">
+        <form id="confirmationForm" class="form">
             <fieldset class="inputs__container">
                 <div class="input__area">
                     <label for="in-holderName">Cardholder Name</label>
@@ -53,23 +53,23 @@
                 </div>
                 <div class="input__area">
                     <label for="in-cardNumber">Card Number</label>
-                    <input type="text" id="in-cardNumber" name="Card Number" placeholder="e.g. 1234 5678 9123 0000">
+                    <input type="text" id="in-cardNumber" name="Card Number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
                     <small class="error-message">Wrong format, numbers only</small>
                 </div>
                 <div class="input__area_group mb-100">
                     <div class="input__area">
                         <label for="in-cardExpiryMonth">Exp. Date (MM/YY)</label>
-                        <input type="number" id="in-cardExpiryMonth" name="Month" min="0" max="12" placeholder="MM">
-                        <input type="number" id="in-cardExpiryYear" name="Year" min="22" max="99" placeholder="YY">
+                        <input type="text" id="in-cardExpiryMonth" name="Month" min="0" max="12" placeholder="MM" maxlength="2">
+                        <input type="text" id="in-cardExpiryYear" name="Year" min="22" max="99" placeholder="YY" maxlength="2">
                         <small class="error-message">Can't be blank</small>
                     </div>
                     <div class="input__area">
                         <label for="in-cardCVC">CVC</label>
-                        <input type="number" id="in-cardCVC" name="cvc" placeholder="e.g. 123">
+                        <input type="text" id="in-cardCVC" name="cvc" placeholder="e.g. 123" maxlength="3">
                         <small class="error-message">Can't be blank</small>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-submit">Confirm</button>
+                <button id="submitBtn" type="submit" class="btn btn-submit">Confirm</button>
             </fieldset>
         </form>
     </main>
