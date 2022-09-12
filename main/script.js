@@ -49,16 +49,62 @@ const errorMessageHandler = function (target, message) {
     const errorMessageContainer = parentEl.querySelector(".error-message");
     parentEl.classList.add("error");
     errorMessageContainer.innerHTML = message;
+
+    switch (target.id) {
+        case "in-holderName":
+            creditCard["owner"] = null;
+            cardHolder.innerHTML = "Jane Appleseed";
+            break;
+        case "in-cardNumber":
+            creditCard["number"] = null;
+            cardNumber.innerHTML = "0000 0000 0000 0000";
+            break;
+        case "in-cardExpiryMonth":
+            creditCard["expiryMonth"] = null;
+            cardExpiryMonth.innerHTML = "00";
+            break;
+        case "in-cardExpiryYear":
+            creditCard["expiryYear"] = null;
+            cardExpiryYear.innerHTML = "0HHHH0";
+            break;
+        case "in-cardCVC":
+            creditCard["cvc"] = null;
+            cardCVC.innerHTML = "000";
+            break;
+    };
 };
 
 const successInput = function (target) {
     const parentEl = target.parentElement;
     parentEl.classList.remove("error");
+
+    switch (target.id) {
+        case "in-holderName":
+            creditCard["owner"] = target.value;
+            cardHolder.innerHTML = creditCard["owner"];
+            break;
+        case "in-cardNumber":
+            creditCard["number"] = target.value;
+            cardNumber.innerHTML = creditCard["number"];
+            break;
+        case "in-cardExpiryMonth":
+            creditCard["expiryMonth"] = target.value;
+            cardExpiryMonth.innerHTML = creditCard["expiryMonth"];
+            break;
+        case "in-cardExpiryYear":
+            creditCard["expiryYear"] = target.value;
+            cardExpiryYear.innerHTML = creditCard["expiryYear"];
+            break;
+        case "in-cardCVC":
+            creditCard["cvc"] = target.value;
+            cardCVC.innerHTML = creditCard["cvc"];
+            break;
+    };
 };
 
 const checkError = function (event) {
     const selectedElement = event.target;
-    
+
     if (selectedElement.id === "in-holderName") {
         if (selectedElement.value.trim().length === 0) {
             errorMessageHandler(selectedElement, "Can't be blank");
@@ -84,6 +130,7 @@ const checkError = function (event) {
             errorMessageHandler(selectedElement, "Month must between 1-12");
         }
         else {
+            successInput(selectedElement);
             if (inputYearExpiry.value.trim().length === 0) {
                 errorMessageHandler(inputYearExpiry, "Year can't be blank");
             } else if (!(numberPattern.test(inputYearExpiry.value))) {
@@ -101,6 +148,7 @@ const checkError = function (event) {
             errorMessageHandler(selectedElement, "Wrong format, number only");
         } 
         else {
+            successInput(selectedElement);
             if (inputMonthExpiry.value.trim().length === 0) {
                 errorMessageHandler(inputMonthExpiry, "Month can't be blank");
             } else if (!(numberPattern.test(inputMonthExpiry.value))) {
@@ -110,6 +158,7 @@ const checkError = function (event) {
             } else successInput(inputMonthExpiry);
         };
     };
+    creditCardValidity(creditCard);
 };
 
 inputCardNumber.addEventListener("input", spaceFormat);
