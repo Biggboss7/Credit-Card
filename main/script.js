@@ -6,6 +6,8 @@ const form = document.getElementById("confirmationForm");
 const submitBtn = document.getElementById("submitBtn");
 const userInputs = document.querySelectorAll("input");
 const inputCardNumber = document.getElementById("in-cardNumber");
+const inputMonthExpiry = document.getElementById("in-cardExpiryMonth");
+const inputYearExpiry = document.getElementById("in-cardExpiryYear");
 const cardDigits = [];
 
 const spaceFormat = function (event) {
