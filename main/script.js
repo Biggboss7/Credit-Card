@@ -12,6 +12,16 @@ const inputMonthExpiry = document.getElementById("in-cardExpiryMonth");
 const inputYearExpiry = document.getElementById("in-cardExpiryYear");
 const inputCardCVC = document.getElementById("in-cardCVC");
 const cardDigits = [];
+const numberPattern = /^[\d\s]+$/;
+const abjadPattern = /^[a-zA-Z\s]+$/;
+
+const creditCard = {
+    owner: null,
+    number: null,
+    expiryMonth: null,
+    expiryYear: null,
+    cvc: null,
+};
 
 const spaceFormat = function (event) {
     if (event.data === null) {
