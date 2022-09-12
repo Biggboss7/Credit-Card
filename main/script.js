@@ -34,6 +34,16 @@ const spaceFormat = function (event) {
     inputCardNumber.value = cardDigits.reduce((acc, currentValue) => acc + currentValue, "");
 };
 
+const creditCardValidity = function (cc) {
+    for (const key in cc) {
+        if (!cc[key]) {
+            submitBtn.disabled = true;
+            return false;
+        };
+    };
+    submitBtn.disabled = false;
+};
+
 const errorMessageHandler = function (target, message) {
     const parentEl = target.parentElement;
     const errorMessageContainer = parentEl.querySelector(".error-message");
