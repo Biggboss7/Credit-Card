@@ -1,13 +1,16 @@
 const cardNumber = document.getElementById("cardNum");
 const cardHolder = document.getElementById("cardHolder");
-const cardExpiry = document.getElementById("cardExpiry");
+const cardExpiryMonth = document.getElementById("cardExpiryMonth");
+const cardExpiryYear = document.getElementById("cardExpiryYear");
 const cardCVC = document.getElementById("cardCVC");
 const form = document.getElementById("confirmationForm");
 const submitBtn = document.getElementById("submitBtn");
 const userInputs = document.querySelectorAll("input");
+const inputCardHolder = document.getElementById("in-holderName");
 const inputCardNumber = document.getElementById("in-cardNumber");
 const inputMonthExpiry = document.getElementById("in-cardExpiryMonth");
 const inputYearExpiry = document.getElementById("in-cardExpiryYear");
+const inputCardCVC = document.getElementById("in-cardCVC");
 const cardDigits = [];
 
 const spaceFormat = function (event) {
