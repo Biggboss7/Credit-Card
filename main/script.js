@@ -4,6 +4,8 @@ const cardExpiryMonth = document.getElementById("cardExpiryMonth");
 const cardExpiryYear = document.getElementById("cardExpiryYear");
 const cardCVC = document.getElementById("cardCVC");
 const form = document.getElementById("confirmationForm");
+const inputsContainer = document.getElementById("id-inputsContainer");
+const thankyouSection = document.getElementById("id-thankyouContainer");
 const submitBtn = document.getElementById("submitBtn");
 const userInputs = document.querySelectorAll("input");
 const inputCardHolder = document.getElementById("in-holderName");
@@ -161,5 +163,11 @@ const checkError = function (event) {
     creditCardValidity(creditCard);
 };
 
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    inputsContainer.classList.add("visually-hidden");
+    thankyouSection.classList.remove("visually-hidden");
+});
+
 inputCardNumber.addEventListener("input", spaceFormat);
-userInputs.forEach(input => input.addEventListener("blur", checkError));
+userInputs.forEach(input => input.addEventListener("blur", checkError)) ;
