@@ -59,7 +59,6 @@ html {
 }
 
 body {
-    max-width: 1440px;
     min-width: 375px;
     min-height: 100vh;
 }
@@ -68,16 +67,19 @@ body {
     width: 1px;
     height: 1px;
     position: absolute;
+    left: auto;
+    top: 0;
     border: 0;
     overflow: hidden;
 }
 
 .app {
     min-height: 100vh;
+    display: flex;
 }
 
 .card__displayer {
-    width: 30.2rem;
+    width: 30%;
     min-height: 100vh;
     position: relative;
     background-image: url("../images/bg-main-desktop.png");
@@ -86,8 +88,10 @@ body {
 }
 
 .card {
-    width: 27.9rem;
-    height: 15.3rem;
+    width: 17.8125rem;
+    width: clamp(17.8125rem, 14.247359154929578rem + 15.211267605633802vw, 27.9375rem);
+    height: 9.8125rem;
+    height: clamp(9.8125rem, 7.875880281690141rem + 8.262910798122066vw, 15.3125rem);
     position: absolute;
     font-size: var(--fs-300);
     letter-spacing: 0.2rem;
@@ -105,12 +109,14 @@ body {
 }
 
 .card__number {
-  font-size: 1.125rem;
-  font-size: clamp(1.125rem, 0.9049295774647887rem + 0.9389671361502347vw, 1.75rem);
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.7359154929577465rem + 1.1267605633802815vw, 1.75rem);
   font-weight: normal;
 }
 
 .card_front p {
+  font-size: 0.5625rem;
+  font-size: clamp(0.5625rem, 0.3644366197183099rem + 0.8450704225352111vw, 1.125rem);
   display: flex;
   justify-content: space-between;
 }
@@ -118,6 +124,12 @@ body {
 .card_back {
   left: 55%;
   top: 51%;
+  background-image: url("../images/bg-card-back.png");
+  background-size: contain;
+}
+
+.card_back img {
+  max-width: 100%;
 }
 
 .card__cvc {
@@ -226,4 +238,81 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-submit:disabled {
   background: grey;
+}
+
+@media screen and (max-width:1160px) {
+  :root {
+    /* Margin */
+    --mb-100: 0.2rem;
+    --mb-200: 0.7rem;
+    --mb-300: 1.2rem;
+    --mb-400: 1.7rem;
+    --mb-500: 2.2rem;
+  }
+
+  .app {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card__displayer, .form {
+    width: 100%;
+  }
+
+  .card__displayer {
+    min-height: 30vh;
+  }
+
+  .card__cvc {
+    position: absolute;
+    top: 46%;
+    left: 74%;
+  }
+
+  .form {
+    min-height: 70vh;
+    padding-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inputs__container {
+    width: 70%;
+  }
+
+  .card_back {
+    left: 35%;
+    top: 20%;
+  }
+
+  .card_front {
+    left: 20%;
+    top: 60%;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .inputs__container {
+    width: 90%;
+  }
+
+  .card_front {
+    left: 8%;
+    top: 70%;
+    z-index: 1;
+  }
+
+  .card_back {
+    left: 18%;
+    top: 20%;
+  }
+
+  .thankyou__section {
+    width: 90%;
+    transform: translateY(-30%);
+  }
 }
