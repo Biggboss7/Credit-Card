@@ -143,6 +143,12 @@ body {
   border: 0;
 }
 
+.thankyou__section {
+  width: 40%;
+  text-align: center;
+  transform: translateX(-30%);
+}
+
 .input__area {
   padding-bottom: 2.2rem;
   position: relative;
