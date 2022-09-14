@@ -124,7 +124,7 @@ body {
 .card_back {
   left: 55%;
   top: 51%;
-  background-image: url("../images/bg-card-back.png");
+  background-image: url("images/bg-card-back.png");
   background-size: contain;
 }
 
