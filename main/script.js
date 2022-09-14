@@ -90,11 +90,11 @@ const successInput = function (target) {
             cardNumber.innerHTML = creditCard["number"];
             break;
         case "in-cardExpiryMonth":
-            creditCard["expiryMonth"] = target.value;
+            creditCard["expiryMonth"] = target.value.padStart(2,0);
             cardExpiryMonth.innerHTML = creditCard["expiryMonth"];
             break;
         case "in-cardExpiryYear":
-            creditCard["expiryYear"] = target.value;
+            creditCard["expiryYear"] = target.value.padStart(2,0);
             cardExpiryYear.innerHTML = creditCard["expiryYear"];
             break;
         case "in-cardCVC":
