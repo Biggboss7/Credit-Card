@@ -82,7 +82,7 @@ body {
     width: 30%;
     min-height: 100vh;
     position: relative;
-    background-image: url("../images/bg-main-desktop.png");
+    background-image: url("images/bg-main-desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -104,7 +104,7 @@ body {
     padding: 2rem;
     left: 35%;
     top: 15%;;
-    background-image: url("../images/bg-card-front.png");
+    background-image: url("images/bg-card-front.png");
     background-size: cover;
 }
 
