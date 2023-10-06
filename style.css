@@ -250,6 +250,10 @@ input[type="number"]::-webkit-inner-spin-button {
     --mb-500: 2.2rem;
   }
 
+.card__displayer {
+    margin-bottom: 5rem;
+}
+
   .app {
     flex-direction: column;
   }
